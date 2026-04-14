@@ -5,7 +5,8 @@
 int main()
 {
     while (1) {
-        malloc(1024 * 1024); // allocate 1MB continuously
+       void *ptr = malloc(1024 * 1024); // allocate 1MB continuously
+        if (!ptr) break;
         usleep(100000);
     }
 }
